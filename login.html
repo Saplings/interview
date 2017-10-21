@@ -38,17 +38,8 @@
 
     <!-- Fonts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <style type="text/css">
-        @font-face {
-            font-family: Samarkan;
-            src: url("SAMAN___.eot")/* EOT file for IE */
-        }
-        
-        @font-face {
-            font-family: Samarkan;
-            src: url("SAMAN___.TTF")/* TTF file for CSS3 browsers */
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
 
     <!-- JS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -60,8 +51,33 @@
 <body>
     <div id="particle"></div>
     <div id="overlay">
-
+        <div class="login-modal">
+            <div class="wrapper">
+                <div class="login-left">
+                    <form class="form-left" method="POST">
+                        <p style="margin: 0px;">Login to your account.</p>
+                        <input id="username" type="text" placeholder="User Name" />
+                        <input id="password" type="password" placeholder="Password" />
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="line">
+                </div>
+                <div class="wordwrapper">
+                    <div class="word">or</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="footer-text">Powered By Saplings</p>
+        </div>
     </div>
+
+
+
+
+    <!--Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!--Options for particle animations"-->
