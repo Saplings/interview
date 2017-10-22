@@ -35,16 +35,57 @@
     <!-- CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="css/style.css" rel="stylesheet">
+    <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
     <!-- JS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".main").onepage_scroll({
+                sectionContainer: "section",
+                responsiveFallback: 600,
+                loop: true
+            });
+        });
+    </script>
 
 </head>
-HELLO WORLD
+
 
 <body>
 
-    <script src="js/index.js" type="text/javascript"></script>
+    <div class="main">
+        <section class="page1">
+            <div class="text">
+                <p style="font-weight:300;margin-bottom:0px;">Human Connection</p>
+                <p style="font-weight:100;font-size: smaller;margin-top:0px;">Live off the grid...</p>
+            </div>
+
+        </section>
+        <section class="page2">
+            <div class="text">
+                <p style="font-weight:300;margin-bottom:0px;">For the Traveler</p>
+                <p style="font-weight:100;font-size: smaller;margin-top:0px;">The adventure is just begining...</p>
+            </div>
+
+        </section>
+        <section class="page3">
+            <div class="text">
+                <p style="font-weight:300;margin-bottom:0px;">For the Socialites</p>
+                <p style="font-weight:100;font-size: smaller;margin-top:0px;">Always trending...</p>
+            </div>
+
+        </section>
+        <section class="page4">
+            <div class="text">
+                <p style="font-weight:300;margin-bottom:0px;">For the Entrepreneurs</p>
+                <p style="font-weight:100;font-size: smaller;margin-top:0px;">Connecting possibilities...</p>
+            </div>
+
+        </section>
+    </div>
 </body>
 
 </html>
