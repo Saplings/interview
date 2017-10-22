@@ -1,11 +1,11 @@
 @font-face {
     font-family: Samarkan;
-    src: url("SAMAN___.eot")/* EOT file for IE */
+    src: url("../fonts/SAMAN___.eot")/* EOT file for IE */
 }
 
 @font-face {
     font-family: Samarkan;
-    src: url("SAMAN___.TTF")/* TTF file for CSS3 browsers */
+    src: url("../fonts/SAMAN___.TTF")/* TTF file for CSS3 browsers */
 }
 
 #particle {
@@ -69,8 +69,8 @@
 .wordwrapper {
     text-align: center;
     height: 12px;
-    position: absolute;
-    left: 0;
+    position: relative;
+    left: -5;
     right: 0;
     top: 50%;
     margin-top: -12px;
@@ -88,6 +88,7 @@
 
 .login-left {
     width: 50%;
+    text-align: center;
 }
 
 .login-right {
@@ -120,11 +121,13 @@
     padding: 20px;
     margin: 0px;
     display: grid;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
 }
 
 input[type=text],
 select {
-    width: 75%;
+    width: 100%;
     padding: 12px 20px;
     margin: 15px 0;
     margin-bottom: 0px;
@@ -136,7 +139,7 @@ select {
 
 input[type=password],
 select {
-    width: 75%;
+    width: 100%;
     padding: 12px 20px;
     margin: 15px 0;
     z-index: 10;
@@ -148,16 +151,18 @@ select {
 }
 
 input[type=submit] {
-    width: 50%;
+    width: 60%;
     position: relative;
     left: 5%;
     background-color: #4CAF50;
     color: white;
     padding: 10px 10px;
-    margin: 8px 0;
+    margin-top: 8px ;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
 }
 
 input[type=submit]:hover {
