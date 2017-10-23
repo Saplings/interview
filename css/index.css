@@ -1,3 +1,56 @@
-html{
-    background-color: #777; 
+
+.blur1{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    left:0;
+    top:0;
+    background-image: url('../images/bm.jpg'); 
+    background-repeat:no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+    z-index: -10;
+}
+.page1_logo{
+    width:200px;
+    background-color: #000;
+    border-radius: 250px;
+}
+
+.page1_text{
+    position: absolute;
+    left: 0;
+    top: 0; 
+}
+
+.slogan{
+    text-align: center;
+    width:100vw;
+    font-size: 50px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;    
+}
+.icon_down{
+    position: absolute;
+    left: 50vw;
+    top: 80vh;
+
+}
+.page2{
+    background-color: #000;
+
+}
+
+.page3{
+    background-color: #fff;
+
+}
+
+.page4{
+    background-color: #fff;
+
 }
