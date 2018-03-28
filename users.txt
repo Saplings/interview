@@ -1,0 +1,37 @@
+--
+-- File generated with SQLiteStudio v3.1.1 on Wed Mar 28 16:10:41 2018
+--
+-- Text encoding used: System
+--
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+-- Table: application
+DROP TABLE IF EXISTS application;
+CREATE TABLE application (iwid TEXT REFERENCES interviewer (iwid) ON DELETE CASCADE ON UPDATE CASCADE, scid TEXT REFERENCES scheduler (scid) ON DELETE CASCADE ON UPDATE CASCADE, ieid TEXT REFERENCES scheduler (scid), PRIMARY KEY (iwid, scid, ieid) ON CONFLICT ROLLBACK);
+
+-- Table: interviewee
+DROP TABLE IF EXISTS interviewee;
+CREATE TABLE interviewee (ieid TEXT PRIMARY KEY ON CONFLICT ROLLBACK, name TEXT, deid TEXT REFERENCES positions (deid) ON DELETE CASCADE ON UPDATE CASCADE, email TEXT UNIQUE ON CONFLICT ROLLBACK, contact INTEGER UNIQUE ON CONFLICT ROLLBACK, location TEXT, photo BLOB, cv_file BLOB, status TEXT);
+
+-- Table: interviewer
+DROP TABLE IF EXISTS interviewer;
+CREATE TABLE interviewer (iwid TEXT PRIMARY KEY, name TEXT, email TEXT UNIQUE ON CONFLICT ROLLBACK, contact INTEGER UNIQUE);
+
+-- Table: positions
+DROP TABLE IF EXISTS positions;
+CREATE TABLE positions(
+deid text primary key,
+dname text
+);
+
+-- Table: sample_profile
+DROP TABLE IF EXISTS sample_profile;
+CREATE TABLE sample_profile (sid TEXT PRIMARY KEY, deid TEXT REFERENCES positions (deid) ON DELETE CASCADE ON UPDATE CASCADE, profile_link TEXT UNIQUE ON CONFLICT ROLLBACK);
+
+-- Table: scheduler
+DROP TABLE IF EXISTS scheduler;
+CREATE TABLE scheduler (scid TEXT PRIMARY KEY, name TEXT, email TEXT UNIQUE ON CONFLICT ROLLBACK, contact INTEGER UNIQUE ON CONFLICT ROLLBACK);
+
+COMMIT TRANSACTION;
+PRAGMA foreign_keys = on;
